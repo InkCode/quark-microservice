@@ -1,0 +1,15 @@
+server:
+  port: 8762
+
+spring:
+  application:
+    # 指定注册到eureka server上的服务名称
+    name: quark-user
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    # 是否注册IP到eureka server，如不指定或设为false，那就会注册主机名到eureka server
+    prefer-ip-address: true
